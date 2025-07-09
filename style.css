@@ -1,0 +1,268 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+#fundo {
+    background-image: url('https://html5up.net/uploads/demos/forty/images/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px 0;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+#textoInicial {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#textoInicial a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.byhtml {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.destaque strong {
+    font-size: 1.5em;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.byhtml span:last-child {
+    font-size: 0.8em;
+    opacity: 0.8;
+    line-height: 1;
+}
+
+.menu-nav {
+    display: flex;
+    align-items: center;
+}
+
+#menu {
+    margin-right: 15px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: block;
+    white-space: nowrap;
+}
+
+#menuHamburguer {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+#menuHamburguer div {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+.titulo {
+    margin-top: -110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.titulo h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+}
+
+.titulo div:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#subtitulo {
+    font-size: 1.2em;
+    font-weight: normal;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+#botaoComecar {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#botaoComecar:hover {
+    background-color: white;
+    color: #333;
+}
+
+#seta {
+    margin-left: 10px;
+}
+
+.image-section-container {
+    display: flex;
+    width: 100%;
+    min-height: 400px;
+}
+
+.image-block {
+    flex-grow: 1;
+    flex-basis: 0;
+    height: 400px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.image-block::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.image-block.block-aquamarine {
+    background-image: url('https://html5up.net/uploads/demos/forty/images/pic01.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-block.block-aquamarine::before {
+    background-color: aquamarine;
+    opacity: 0.8;
+}
+
+.image-block.block-blueviolet {
+    background-image: url('https://html5up.net/uploads/demos/forty/images/pic02.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.image-block.block-blueviolet::before {
+    background-color: blueviolet;
+    opacity: 0.8;
+}
+
+.overlay-content {
+    z-index: 2;
+    padding: 20px;
+    max-width: 90%;
+}
+
+.overlay-content h3 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.overlay-content p {
+    font-size: 1.1em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 980px) {
+    #textoInicial {
+        padding: 0 15px;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    #menuHamburguer {
+        display: flex;
+    }
+
+    .titulo h1 {
+        font-size: 3em;
+    }
+
+    #subtitulo {
+        font-size: 1.1em;
+    }
+
+    .image-section-container {
+        flex-direction: column;
+    }
+
+    .image-block {
+        width: 100%;
+        flex-basis: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #fundo {
+        height: 60vh;
+    }
+
+    .titulo h1 {
+        font-size: 2.5em;
+    }
+
+    #subtitulo {
+        font-size: 1em;
+        padding: 0 15px;
+    }
+
+    .overlay-content h3 {
+        font-size: 2em;
+    }
+
+    .overlay-content p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    #fundo {
+        height: 50vh;
+    }
+
+    .titulo h1 {
+        font-size: 2em;
+    }
+
+    #subtitulo {
+        font-size: 0.9em;
+    }
+    
+    #botaoComecar {
+        padding: 12px 25px;
+        font-size: 0.9em;
+    }
+}
